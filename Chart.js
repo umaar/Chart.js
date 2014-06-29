@@ -1104,7 +1104,7 @@ window.Chart = function(context){
 			for (var i=0; i<data.labels.length; i++){
 				ctx.save();
 				if (rotateLabels > 0){
-					ctx.translate(yAxisPosX + i*valueHop,xAxisPosY + config.scaleFontSize);
+					ctx.translate(yAxisPosX + i*valueHop + valueHop/2, xAxisPosY + config.scaleFontSize);
 					ctx.rotate(-(rotateLabels * (Math.PI/180)));
 					ctx.fillText(data.labels[i], 0,0);
 					ctx.restore();
